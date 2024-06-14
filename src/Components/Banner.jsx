@@ -12,10 +12,10 @@ const Banner = () => {
                         <img src={image} alt="" className='max-w-[400px] max-h-[350px] w-full mx-auto drop-shadow-[-10px_10px_12px_rgba(0,0,0,1)] object-cover' />
                     </div>
                     <div  className='flex flex-col gap-6 sm:pt-0'>
-                        <h1 className='text-3xl sm:text-4xl font-bold '>
+                        <h1 data-aos="fade-in" className='text-3xl overflow-hidden sm:text-4xl font-bold '>
                         Winter sale upto 50% off
                         </h1>
-                        <p className='text-gray-500 text-sm tracking-wide leading-5'>
+                        <p data-aos="fade-in"  className='text-gray-500 overflow-hidden text-sm tracking-wide leading-5'>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta molestiae quas temporibus mollitia! Asperiores inventore, qui consequatur quis autem quaerat officiis possimus veritatis debitis sit temporibus est cumque id cum.
                         </p>
                         <div className='flex flex-col gap-4'>

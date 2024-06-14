@@ -6,7 +6,7 @@ import image4 from "../assets/women/women4.jpg";
 import { herodata } from '../DataHouse/Data'
 import Slider from 'react-slick';
 import SlideCard from './SlideCard';
-const Hero = () => {
+const Hero = ({handle}) => {
     const data = herodata(image1, image2, image3, image4);
     const settings = {
       dots: true,
@@ -27,7 +27,7 @@ const Hero = () => {
         <Slider {...settings}>
         {
          data.map((item, index)=>(
-          <SlideCard key={index} title={item.title} description={item.description} img={item.img}/>
+          <SlideCard handle={handle} key={index} title={item.title} description={item.description} img={item.img}/>
          ))
         }
         </Slider>

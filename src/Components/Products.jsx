@@ -7,7 +7,7 @@ import { productsData } from '../DataHouse/Data';
 import { FaStar } from 'react-icons/fa';
 import HeaderPro from './HeaderPro';
 
-const Products = () => {
+const Products = ({handle}) => {
     const data = productsData(image1, image2, image3, image4);
   return (
     <div className="mt-14 mb-12" data-aos="fade-in-out" data-aos-delay="300">
@@ -36,8 +36,8 @@ const Products = () => {
                 ))
             }
         </div>
-        <div className='flex justify-center'>
-            <button className='text-center mt-10 cursor-pointer bg-primary text-white py-1 px-2 rounded-md'>View All Button</button>
+        <div data-aos="zoom-in" className='flex justify-center'>
+            <button onClick={handle} className='text-center mt-10 cursor-pointer bg-primary text-white py-1 px-2 rounded-md'>View All Button</button>
         </div>
       </div>
     </div>

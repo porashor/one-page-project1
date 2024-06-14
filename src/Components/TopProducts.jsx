@@ -6,7 +6,7 @@ import image1 from "../assets/shirt/shirt.png";
 import image2 from "../assets/shirt/shirt2.png";
 import image3 from "../assets/shirt/shirt3.png";
 import { FaStar } from 'react-icons/fa6';
-const TopProducts = () => {
+const TopProducts = ({handle}) => {
     const data = TopProData(image1, image2, image3)
     console.log(data)
   return (
@@ -16,7 +16,7 @@ const TopProducts = () => {
         <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap0-20 md:gap-5 place-items-center mt-28'>
             {
                 data.map((item)=>(
-                    <div key={item.id} className='rounded-2xl bg-white dark:bg-gray-800 hover:bg-black/80 dark:hover:bg-primary hover:text-white relative shadow-xl duration-high group max-w-[300px]'>
+                    <div data-aos="zoom-in" key={item.id} className='rounded-2xl bg-white dark:bg-gray-800 hover:bg-black/80 dark:hover:bg-primary hover:text-white relative shadow-xl duration-high group max-w-[300px]'>
                         <div className='h-[100px]'>
                             <img src={item.img} alt="shirt" className='max-w-[140px] block mx-auto transform -translate-y-20 group-hover:scale-105 duration-300 drop-shadow-md' />
                         </div>
@@ -31,7 +31,7 @@ const TopProducts = () => {
                                 {item.title}
                             </h1>
                             <p className='text-gray-500 group-hover:text-white duration-300 text-sm line-clamp-2 '>{item.description}</p>
-                            <button className='bg-primary hover:scale-105 duration-300 text-white py-1 px-4 rounded-full mt-4 group-hover:bg-white group-hover:text-primary'>Order Now</button>
+                            <button onClick={handle} className='bg-primary hover:scale-105 duration-300 text-white py-1 px-4 rounded-full mt-4 group-hover:bg-white group-hover:text-primary'>Order Now</button>
                         </div>
                     </div>
                 ))

@@ -9,7 +9,7 @@ import { DropDown, Menu } from "../DataHouse/Data";
 
 
 
-export default function Navbar(){
+export default function Navbar({handle}){
     return (
         <div>
             <div className="shadow-md bg-white dark:bg-gray-900 dark:text-white duration-200 relative z-40">
@@ -28,7 +28,7 @@ export default function Navbar(){
                             <IoMdSearch className="text-gray-500 group-hover:text-primary absolute top-1/3 right-3"/>
                         </div>
                         {/* order-btn */}
-                        <button className="gradient transition-all duration-200 text-white py-1 px-4 rounded-full flex items-center gap-3 group">
+                        <button onClick={handle} className="gradient transition-all duration-200 text-white py-1 px-4 rounded-full flex items-center gap-3 group">
                             <span className="group-hover:block hidden transition-all duration-200">Order</span>
                             <FaCartShopping className="group-hover:hidden block text-xl drop-shadow-sm "/>
                         </button>

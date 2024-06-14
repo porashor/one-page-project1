@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React, {useEffect, useState} from 'react'
 import Navbar from './Components/Navbar'
 import Hero from './Components/Hero'
 import Products from './Components/Products'
@@ -8,8 +8,11 @@ import TopProducts from './Components/TopProducts';
 import Banner from './Components/Banner';
 import Subscribe from './Components/Subscribe';
 import Testimonial from './Components/Testimonial';
+import Foother from './Components/Foother';
+import Popup from './Components/Popup';
 
 const App = () => {
+  const [pop, setPop] = useState(false);
   useEffect(() => {
     AOS.init({
       // settings such as:
@@ -19,17 +22,26 @@ const App = () => {
     });
     AOS.refresh();
   }, []);
+  function handle(){
+    if(pop=== true){
+      setPop(false)
+    }else{
+      setPop(true)
+    }
+  }
   
   return (
-    <div>
-      <Navbar/>
-      <Hero/>
-      <Products/>
-      <TopProducts/>
+    <div className='bg-white dark:bg-gray-900 dark:text-white duration-200'>
+      <Navbar  handle = {handle}/>
+      <Hero handle={handle}/>
+      <Products handle={handle}/>
+      <TopProducts handle={handle}/>
       <Banner/>
       <Subscribe/>
-      <Products/>
+      <Products handle={handle}/>
       <Testimonial/>
+      <Foother/>
+      <Popup pop={pop} setpop={setPop}/>
     </div>
   )
 }
