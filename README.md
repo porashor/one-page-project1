@@ -1,4 +1,6 @@
-# React + Vite
+#this is a one page project 
+##myShop
+<img src="./Screenshot 2024-06-14 205241.png"/>
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
